@@ -1,0 +1,303 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,700;1,500&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  
+  font-family: "Roboto", sans-serif;
+  font-size: 1rem;
+}
+
+:root{
+  --border-color1:rgb(4, 234, 255);
+  --border-color2:#1d1e4c;
+  --text-color1:#1d1e4c;
+  --text-color2:black;
+  --text-color3:rgb(220, 220, 220);
+  --bg-color1:rgb(220, 220, 220);
+  --bg-color2:lightblue;
+  
+}
+
+.darkMode-on{
+  --bg-color2:#3b3b3b;
+  --text-color1:rgb(255, 179, 0);
+  --text-color2:rgb(179, 176, 176);
+}
+
+body{
+  width: 100%;
+  height: 100%;
+  background:var(--bg-color1);
+  padding: 2%;
+}
+
+.container{
+  width: 100%;
+  /* height: 100%; */
+  background: var(--bg-color2);
+  border: 1rem solid var(--border-color2);
+  outline: 2px solid var(--border-color1);
+  border-radius: 2px;
+  padding: 5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 5rem;
+}
+.container .row{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+
+}
+.container .row:nth-child(1)
+{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+  gap: 1rem;
+  /* border: 1px solid red; */
+}
+
+.row .profile-pic{
+  width: 50%;
+  height:90%;
+  /* height:auto; */
+  border-radius: 70px;
+  
+  border: .5rem solid white;
+  box-shadow: 1px 2px 5px rgba(0, 0, 0, 0.3);
+  overflow: hidden;
+  display: flex;
+  
+}
+.profile-pic img{
+  width: 100%;
+  height: 100%;
+  background-position: center;
+  object-fit: cover;
+  
+  
+}
+.basic-detail{
+  width: 100%;
+  padding-bottom:5rem;
+  text-align: right;
+  /* border: 1px solid red; */
+}
+.basic-detail h2.person-name{
+  color: var(--text-color2);
+  font-size: 4rem;
+  /* word-spacing: 10px; */
+  letter-spacing: 5px;
+}
+.basic-detail .since{
+  color: var(--text-color2);
+  font-size: 2rem;
+}
+
+.row .title{
+  font-size: 5rem;
+  margin-bottom: 0.7rem;
+  color: var(--text-color1);
+}
+
+.row .description{
+  font-size: 1.2rem;
+  /* line-height: 2rem; */
+  text-align: justify;
+  color: var(--text-color2);
+}
+
+.row .biographie-title{
+  font-size: 2rem;
+  color: var(--text-color1);
+  margin-bottom: 1rem;
+}
+
+.row .biography-description{
+  font-size: 1.2rem;
+  /* line-height: 2rem; */
+  color: var(--text-color2);
+  padding-left: 3rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.more{
+
+  padding: 10px;
+  border-top-left-radius: 15px;
+  border-bottom-left-radius: 15px;
+  position: fixed;
+  /* transform: translateY(-10%); */
+  
+  background: var(--bg-color1);
+  bottom: 50%;
+  right: 0;
+}
+
+#darkMode-icon{
+  position: fixed;
+  top: 60%;
+  right: 3.3%;
+  padding: 10px;
+  background: white;
+  color: var(--text-color1);
+  font-size: 2rem;
+  border: 0.3rem solid var(--text-color3);
+  border-radius: 50%;
+  box-shadow: 2px 5px 10px var(--text-color2);
+  cursor: pointer;
+}
+
+
+
+
+
+
+
+
+/* media query start */
+/*=====  maxwidth:1200px  =====*/
+@media (min-width:1600px)
+{
+ .container .row:nth-child(1)
+ {
+  /* border: 1px solid red; */
+  display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 5rem;
+  }
+  .basic-detail{
+    text-align: center;
+  }
+  .basic-detail h2.person-name{
+    font-size: 5rem;
+  }
+  .basic-detail .since{
+    
+    font-size: 3rem;
+  }
+  .row .title{
+    font-size: 7rem;
+  }
+  .row .description{
+    font-size: 3rem;
+
+  }
+  .row .description strong{
+    font-size: 3rem !important;
+  }
+  .row .biographie-title{
+    font-size: 7rem;
+    
+  }
+  .row .biography-description li{
+    font-size:3rem;    
+  }
+  .more span,a{
+    font-size: 3rem;
+  }
+  .more span{
+    /* font-size: 3rem; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    
+  }
+  #darkMode-icon{
+    font-size: 5rem;
+    padding: 2rem;
+    box-shadow: 5px 10px 50px var(--text-color2);
+ 
+  }
+  
+}
+
+/*=====  maxwidth:1200px  =====*/
+@media (max-width:1200px)
+{
+ .container .row:nth-child(1)
+ {
+  /* border: 1px solid red; */
+  display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .basic-detail {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    
+  }
+}
+
+/* media query end */
+
+
+/*=====  maxwidth:991px  =====*/
+@media (max-width:991px){
+  body{
+    /* width: 100%; */
+    /* padding: 5%; */
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+  }
+  .container{
+    width: 100%;
+    padding: 12%;
+  }
+  .row .profile-pic{
+    border-width: 3px;
+    border-radius: 2rem;
+  }
+  .basic-detail {
+    text-align: center;
+    
+  }
+  .basic-detail h2.person-name{
+    font-size: 2.8rem;
+  }
+  .row .title{
+    font-size: 4rem;
+  }
+  .more span{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    
+  }
+}
+
+/*=====  max-width:320px  =====*/
+@media (max-width:320px){
+  .basic-detail h2.person-name{
+    font-size: 2.3rem;
+  }
+  .basic-detail .since{
+    font-size: 1.1rem;
+  }
+  .row .title{
+    font-size: 3rem;
+  }
+
+  .row .description{
+    
+    text-align: left;
+   
+  }
+
+}
